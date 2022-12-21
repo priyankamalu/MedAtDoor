@@ -1,0 +1,40 @@
+
+<div class="row">
+    <div class="col-md-6">
+        <button (click)=onClick() class="btn btn-success">AddProduct</button>
+            <br>
+            <br>
+        <table class="table table-bordered">
+            <tr>
+                <th>name</th><th>Catagory</th><th>Quantity</th><th>Price</th><th>Action</th><th>Action</th>
+            </tr>
+            <tr *ngFor="let pro of p">
+                <td>
+                    {{pro.pname}}
+                </td>
+                <td>
+                    {{pro.catagory}}
+                </td>
+                <td>
+                    {{pro.quantity}}
+                </td>
+                <td>
+                    {{pro.price}}
+                </td>
+                <td><a [routerLink]="['../delete',pro.pid]">delete</a></td>
+                <td><button  [routerLink]="['../update']"class="btn btn-success" >update</button>
+                </td><!--  <td><a [routerLink]="['../update']">Update</a></td>-->
+                </tr>
+        </table>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+

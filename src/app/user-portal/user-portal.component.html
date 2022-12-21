@@ -1,0 +1,44 @@
+
+<div class="row">
+    <div class="col-md-6">
+        
+            <br>
+            <br>
+        <table class="table table-bordered">
+            <tr>
+                <th>name</th><th>Catagory</th><th>Quantity</th><th>Price</th><th>Action</th>
+            </tr>
+            <tr *ngFor="let pro of pp">
+                <td>
+                    {{pro.pname}}
+                </td>
+                <td>
+                    {{pro.catagory}}
+                </td>
+                <td>
+                    {{pro.quantity}}
+                </td>
+                <td>
+                    {{pro.price}}
+                </td>
+                
+    <td><button (click)=onClick1(pro.pid) class="btn btn-success" >AddtoCart</button>
+                </td><!--  <td><a [routerLink]="['../update',,pro.pid]">Update</a></td>-->
+              
+                <td> <button  class="btn btn-success" (click)="onClick()">VisitCart</button></td>
+                </tr>
+        </table>
+
+ 
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+

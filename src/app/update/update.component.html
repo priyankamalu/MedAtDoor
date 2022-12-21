@@ -1,0 +1,65 @@
+<div class="row">
+    <h1>Enter Details to update the Product</h1>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form  #regForm="ngForm"  (ngSubmit)="editProduct(regForm.value)">
+                        <div>
+                <label for="pname">Name</label>
+                <input 
+                type="text"
+                value="pro.pname"
+                name="pname"
+                id="pname"
+                ngModel
+                #pname
+                [(ngModel)]="pro.pname"
+                 required
+                class="form-control">
+            </div>
+            <div >
+                <label for="catagory">Catagory</label>
+                <input 
+                type="text"
+                
+                name="catagory"
+                id="catagory"
+                ngModel
+                 #catagory
+                required
+                 [(ngModel)]="pro.catagory"
+                class="form-control">
+            </div>
+            <div >
+                <label for="price">Price</label>
+                <input 
+                type="text"
+                
+                name="price"
+                id="price"
+                ngModel
+                #price
+                [(ngModel)]="pro.price"
+                 required
+                class="form-control">
+            </div>
+           
+            <div >
+                <label for="quantity">Quantity</label>
+                <input 
+                type="text"
+                id="quantity"
+                name="quantity"
+                ngModel
+                #quantity
+                [(ngModel)]="pro.quantity"
+                required
+                class="form-control">
+            </div>
+            <br>
+            <br>
+            <input class="btn btn-success" type="submit" value="submit">
+        </form>
+    </div>
+</div>
+
+

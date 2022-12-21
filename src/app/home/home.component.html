@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+    
+    <div class="col-md-12">
+           <div class="card" style="background-color:azure;">
+            <h1 style="color: brown;">Welcome to Medicare Online Shopping</h1>
+
+        <br>
+        <br>
+            <h4>here you can buy medicine as per your need </h4>
+             
+           </div>
+    </div>
+    <div class="col-md-12">
+        <br>
+        <div class="card" style="background-color: antiquewhite;">
+            
+       <h4  >Check Hear Your Desire Medicine</h4>
+       <br>
+       <h5>Enter Name Or Catagory Of Medicine You Want To Search</h5>
+       <br>
+       
+    </div>
+    
+</div>
+    <br><br>
+</div>
+</div>
+<br>
+<div class="search-med">
+<input class="form-control" type="text" name="search" [(ngModel)]="searchText" 
+autocomplete="off" placeholder="searchMed">
+</div>
+<br>
+<div class="contaner">
+    <div class="row">
+        <div class="col-md-12">
+        <div >
+            <table class="table table-bordered">
+                <tr>
+                    <th>name</th><th>Catagory</th><th>Price</th>
+                </tr>
+                <tr *ngFor="let pro of p |filter:searchText">
+                    <td>
+                        {{pro.pname}}
+                    </td>
+                    <td>
+                        {{pro.catagory}}
+                    </td>
+                    <td>
+                        {{pro.price}}
+                    </td>
+                   <td><button class="btn btn-success"(click)="on()">AddToCart</button></td>
+                    </tr>
+            </table>
+        </div>
+    </div> 
+    </div>
+</div>
+

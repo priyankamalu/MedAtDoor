@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            
+        </div>
+
+        <div class="col-md-4">
+            
+            <form   #loginForm="ngForm" (ngSubmit)="loginAdmin()">
+                <div class="form-group">
+                    <label for="uname">Username</label>
+                    <input type="text"
+                    name="uname"
+                    class="form-control"
+                    id="uname"
+                    [(ngModel)]="user.uname"
+                    ngModel
+                #username="ngModel"
+                required>
+                </div>
+                <span class="text-danger" *ngIf="!username.valid && username.touched">please enter name</span>
+                <div class="form-group">
+                    <label for="upassword">password</label>
+                    <input type="password"
+                    name="upassword"
+                    class="form-control"
+                    id="upassword"
+                    [(ngModel)]="user.upassword"
+                    ngModel
+                #username="ngModel"
+                required>
+                </div>
+                <span class="text-danger" *ngIf="!username.valid && username.touched">please enter name</span>
+                 
+                <button class="btn btn-success">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
